@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#09090b">
-<title>0ffby0ne — ctf team, iit madras</title>
+<title>offby0ne — ctf team, iit madras</title>
 <meta name="description" content="offby0ne — ctf team from iit madras (bcyber). pwn, crypto, web, rev.">
 <meta property="og:title" content="offby0ne">
 <meta property="og:description" content="ctf team from iit madras (bcyber). pwn, crypto, web, rev.">
@@ -44,11 +44,30 @@
     letter-spacing:-0.02em;
     margin:0.6em 0 0.15em;
     color:var(--fg);
+    text-shadow: 0 0 30px rgba(255,92,51,0.08);
+    animation: flicker-in 1.4s steps(1) both;
   }
   h1 .off{color:var(--fg);}
   h1 .zero{
     color:var(--accent);
     display:inline-block;
+    text-shadow:
+      0 0 8px rgba(255,92,51,0.85),
+      0 0 22px rgba(255,92,51,0.55),
+      0 0 60px rgba(255,92,51,0.25);
+  }
+
+  @keyframes flicker-in{
+    0%{opacity:0;}
+    3%{opacity:1;}
+    6%{opacity:0.2;}
+    8%{opacity:1;}
+    20%{opacity:0.4;}
+    22%{opacity:1;}
+    100%{opacity:1;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    h1{animation:none;}
   }
 
   .tagline{color:var(--dim); margin:0 0 2em; font-size:14px;}
@@ -71,7 +90,7 @@
   .links{display:flex; flex-wrap:wrap; gap:1.6em; font-size:14px;}
   .links a{color:var(--fg); text-decoration:none; position:relative;}
   .links a::after{content:"↗"; font-size:11px; margin-left:0.3em; color:var(--dim);}
-  .links a:hover{color:var(--accent);}
+  .links a:hover{color:var(--accent); text-shadow:0 0 12px rgba(255,92,51,0.6);}
   .links a:hover::after{color:var(--accent);}
 
   footer{margin-top:3em; font-size:12px; color:var(--dim);}
@@ -91,16 +110,16 @@
 </head>
 <body>
   <div class="wrap">
-    <div class="prompt">0ffby0ne@iitm:<span class="path">~</span>$ whoami</div>
+    <div class="prompt">offby0ne@iitm:<span class="path">~</span>$ whoami</div>
 
-    <h1><span class="off">0ff</span><span class="zero">by0ne</span></h1>
+    <h1><span class="off">off</span><span class="zero">by0ne</span></h1>
 
-    <p class="tagline">ctf team · <b>iit madras</b>, bcyber</p>
+    <p class="tagline">ctf team · <b>iit madras</b></p>
 
     <p class="lead">
       we write exploits, break code, and drop writeups when the dust settles.
       just a team messing around with ctfs and breaking things for fun.
-      interested in joining? ping us on discord.<a href="https://discord.com/" target="_blank" rel="noopener">instagram</a>.
+      interested in joining? ping us on <a href="https://discord.com/" target="_blank" rel="noopener">discord</a>.
     </p>
 
     <hr class="rule">
@@ -117,7 +136,7 @@
 
     <nav class="links">
       <a href="https://instagram.com/" target="_blank" rel="noopener">instagram</a>
-      <a href="https://ctftime.org/team/444532" target="_blank" rel="noopener">ctftime</a>
+      <a href="https://ctftime.org/" target="_blank" rel="noopener">ctftime</a>
       <a href="https://github.com/" target="_blank" rel="noopener">github</a>
     </nav>
 
